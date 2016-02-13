@@ -23,6 +23,14 @@
   display: none !important;
 }
 
+.medium {
+  display: none;
+}
+
+.small {
+  display: none;
+}
+
 header {
   height: 50px;
   width: 100%;
@@ -58,6 +66,9 @@ header nav a:hover {
 }
 
 footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   height: 50px;
   background-color: black;
@@ -65,11 +76,16 @@ footer {
 }
 
 footer p {
+  display: inline-block;
   font-size: 0.8em;
-  margin: auto;
   color: white;
-  line-height: 50px;
-  text-align: center;
+}
+
+.footer-img {
+  height: 40px;
+  width: auto;
+  display: inline-block;
+  margin-right: 20px;
 }
 
 .banner {
@@ -227,4 +243,61 @@ footer p {
   float: right;
   margin-right: 10%;
   margin-top: 17px;
+}
+
+@media (max-width: 900px) {
+
+  .big {
+    display: none;
+  }
+
+  .medium {
+    display: inline-block;
+  }
+
+  .story {
+    text-align: center;
+  }
+
+  .story h1 {
+    padding-left: 0%;
+    display: block;
+  }
+
+  .story-button {
+    float: none;
+    margin: 0 auto;
+  }
+
+  #about p {
+    width: 80%;
+  }
+
+  #contact p {
+    width: 80%;
+  }
+
+}
+
+@media (max-width: 600px) {
+
+  .medium {
+    display: none;
+  }
+
+  .small {
+    display: inline-block;
+  }
+
+  header nav {
+    width: 100%;
+  }
+
+  header nav a {
+    width: 19%;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+
 }
