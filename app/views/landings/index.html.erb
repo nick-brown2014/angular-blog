@@ -1,0 +1,45 @@
+<header>
+  <nav>
+    <a href = "">About</a>
+    <a href = "">Projects</a>
+    <a href - "">Stories</a>
+    <a href = "">Contact</a>
+  </nav>
+</header>
+<div class="container">
+  <div class="banner_cont">
+    <%= image_tag "pikes.png", class: "banner" %>
+  </div>
+  <div id="about" class="section">
+    <h1>Hello!</h1>
+    <div class="line forty"></div>
+    <p class="sixty">Thanks for coming to visit my site. My name is Nick Brown, and I am a Denver based web developer and writer.</p>
+    <p class="sixty">I have been working freelance for over a year now making beautiful and professional websites for companies and individuals who are interested in rebranding themselves.  If you're online image needs a touch-up, or you are curious about my services, please feel free to get in touch!</p>
+    <div class="button"><a href="">Contact</a></div>
+    <p class="sixty">While coding pays the bills, my passion is writing. I have some selections of my work below, if you're interested, please feel free to check them out! There will be more coming soon :)</p>
+  </div>
+  <div id="projects" class="section">
+    <% Project.all.each do |project| %>
+      <div class="project">
+        <h1><%= project.title %></h1>
+        <p class="eighty"><%= project.description %></p>
+        <div class="button"><%= link_to project.title, project.link %></div>
+      </div>
+    <% end %>
+  </div>
+  <div id="stories">
+    <% Story.all.each do |story| %>
+      <div class="story">
+        <h1><%= story.title %></h1>
+        <div class="story-button">
+          <div class="button"><%= link_to "Read", story_path(story.id) %></div>
+          <p>-</p>
+          <div class="button"><%= link_to "Download", download_story_path(story.id) %></div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+<footer>
+  <p>Built with Rails, made fun by Angular  -  Copyright Nick Brown 2016</p>
+</footer>
