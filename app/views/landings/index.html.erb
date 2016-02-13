@@ -1,9 +1,10 @@
 <header>
   <nav>
-    <a href = "">About</a>
-    <a href = "">Projects</a>
-    <a href - "">Stories</a>
-    <a href = "">Contact</a>
+    <a id="about-scroll">About</a>
+    <a id="projects-scroll">Projects</a>
+    <a id="stories-scroll">Writing</a>
+    <a id="contact-scroll">Contact</a>
+    <a id="top-scroll">Top</a>
   </nav>
 </header>
 <div class="container">
@@ -11,14 +12,16 @@
     <%= image_tag "pikes.png", class: "banner" %>
   </div>
   <div id="about" class="section">
-    <h1>Hello!</h1>
+    <h1 id="about-dest">Hello!</h1>
     <div class="line forty"></div>
     <p class="sixty">Thanks for coming to visit my site. My name is Nick Brown, and I am a Denver based web developer and writer.</p>
-    <p class="sixty">I have been working freelance for over a year now making beautiful and professional websites for companies and individuals who are interested in rebranding themselves.  If you're online image needs a touch-up, or you are curious about my services, please feel free to get in touch!</p>
+    <p class="sixty">I have been working freelance for over a year now making beautiful and professional websites for companies and individuals who are interested in rebranding themselves.  If your online image needs a touch-up, or you are curious about my services, please feel free to get in touch!</p>
     <div class="button"><a href="">Contact</a></div>
     <p class="sixty">While coding pays the bills, my passion is writing. I have some selections of my work below, if you're interested, please feel free to check them out! There will be more coming soon :)</p>
   </div>
   <div id="projects" class="section">
+    <h1>Projects</h1>
+    <div class="line sixty"></div>
     <% Project.all.each do |project| %>
       <div class="project">
         <h1><%= project.title %></h1>
@@ -28,6 +31,8 @@
     <% end %>
   </div>
   <div id="stories">
+    <h1>Writing</h1>
+    <div class="line sixty"></div>
     <% Story.all.each do |story| %>
       <div class="story">
         <h1><%= story.title %></h1>
@@ -39,7 +44,14 @@
       </div>
     <% end %>
   </div>
+  <div id="contact" class="section">
+    <h1>Contact</h1>
+    <div class="line forty"></div>
+    <p class="sixty">Do you have a project that you would like to discuss with me? Are you curious about my rates or availability? Do you just want to chat about writing or web design?</p>
+    <p class="sixty">Great! I'm excited to hear from you. You can get in touch with me by clicking on the address below, or sending an email there. Let's build your ideal website together.</p>
+    <a href="mailto:nick.brown2014@gmail.com?Subject=Contact from your Website!">nick.brown2014@gmail.com</a>
+  </div>
 </div>
 <footer>
-  <p>Built with Rails, made fun by Angular  -  Copyright Nick Brown 2016</p>
+  <p>Built with Rails, made fun by jQuery  -  Copyright Nick Brown 2016</p>
 </footer>
