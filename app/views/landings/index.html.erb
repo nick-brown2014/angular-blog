@@ -26,7 +26,7 @@
       <div class="project">
         <h1><%= project.title %></h1>
         <p class="eighty"><%= project.description %></p>
-        <div class="button"><%= link_to project.title, project.link %></div>
+        <div class="button"><%= link_to project.title, project.link, target: 'blank' %></div>
       </div>
     <% end %>
   </div>
