@@ -16,10 +16,11 @@
 //= require angular
 //= require_tree .
 
-// angular.module("myBlog", [])
-// .controller("main", function() {
+var myBlog = angular.module("myBlog", []);
 
-// });
+myBlog.controller("mainController", function($scope) {
+  $scope.name = "Nick";
+});
 
 $(document).ready(function() {
 
