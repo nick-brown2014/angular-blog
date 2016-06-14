@@ -16,12 +16,6 @@
 //= require angular
 //= require_tree .
 
-// var myBlog = angular.module("myBlog", []);
-
-// myBlog.controller("mainController", function($scope) {
-//   $scope.name = "Nick";
-// });
-
 $(document).ready(function() {
 
   $("#about-scroll").click(function(event) {
